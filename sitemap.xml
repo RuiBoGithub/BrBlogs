@@ -12,4 +12,12 @@
          <loc>https://mydomain.org/mysite/blog/post1/</loc>
          <lastmod>2025-02-27</lastmod>
     </url>
+    <url>
+         <loc>https://mydomain.org/mysite/misc/mkdocs/</loc>
+         <lastmod>2025-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/misc/photography/</loc>
+         <lastmod>2025-02-27</lastmod>
+    </url>
 </urlset>

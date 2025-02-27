@@ -43,16 +43,6 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-create-new-mkdocs-environment">1. Create New MkDocs Environment</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-configure-mkdocsyml">2. Configure mkdocs.yml</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-build-and-serve-documentation">3. Build and Serve Documentation</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-transfer-to-github">4. Transfer to Github</a>
-    </li>
-    </ul>
                 </li>
               </ul>
               <ul>
@@ -62,6 +52,11 @@
               <p class="caption"><span class="caption-text">Blog</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="blog/post1/">First Post</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="misc/mkdocs/">mkdocs</a>
                   </li>
               </ul>
       </div>
@@ -87,39 +82,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="mkdocs-project-setup-guide">MkDocs Project Setup Guide</h1>
-<h2 id="1-create-new-mkdocs-environment">1. Create New MkDocs Environment</h2>
-<pre><code class="language-bash">mkdocs new .
-</code></pre>
-<h2 id="2-configure-mkdocsyml">2. Configure mkdocs.yml</h2>
-<pre><code class="language-yaml">site_name: Rui Bo Blog
-site_url: https://mydomain.org/mysite
-theme:
-  name: readthedocs
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - rus
-</code></pre>
-<h2 id="3-build-and-serve-documentation">3. Build and Serve Documentation</h2>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<h2 id="4-transfer-to-github">4. Transfer to Github</h2>
-<pre><code class="language-bash">git init
-git status
-
-# (1) Stage and (2) Confirm
-git add .
-git add -A
-git add docs/index.md README.md
-git commit -m &quot;Initial commit&quot;
-
-git remote add origin https://github.com/your-username/PhD-Thoughts.git
-git remote remove origin
-
-git push -u origin main
-git pull origin main
-</code></pre>
+                <p>Hi! This is Rui!</p>
               
             </div>
           </div><footer>
@@ -168,5 +131,5 @@ git pull origin main
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-02-27 20:16:44.279765+00:00
+Build Date UTC : 2025-02-27 20:29:05.712466+00:00
 -->
