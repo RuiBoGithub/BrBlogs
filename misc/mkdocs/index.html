@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Rui Bo" /><link rel="canonical" href="https://mydomain.org/mysite/misc/mkdocs/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://mydomain.org/mysite/misc/mkdocs/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
     <title>mkdocs - Rui's Blog</title>
     <link rel="stylesheet" href="../../css/theme.css" />
@@ -49,9 +49,12 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Blog</span></p>
               <ul>
-                <li class="toctree-l1"><a class="" href="../../blog/">Blog</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blog/post1/">Post1:{if there is}</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blog/post2/">Post2:{comments}</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc</span></p>
               <ul class="current">
@@ -68,6 +71,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#5-online">5. Online</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Unipy/">Unipy</a>
                   </li>
               </ul>
       </div>
@@ -134,7 +139,8 @@ git pull origin main
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../about/" class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../blog/post2/" class="btn btn-neutral float-left" title="Post2:{comments}"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Unipy/" class="btn btn-neutral float-right" title="Unipy">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -157,8 +163,10 @@ git pull origin main
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../blog/post2/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../Unipy/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

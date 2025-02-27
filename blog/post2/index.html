@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Rui Bo" /><link rel="canonical" href="https://mydomain.org/mysite/blog/post2/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://mydomain.org/mysite/blog/post2/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Post2 - Rui's Blog</title>
+    <title>Post2:{comments} - Rui's Blog</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Post2";
+        var mkdocs_page_name = "Post2:{comments}";
         var mkdocs_page_input_path = "blog/post2.md";
         var mkdocs_page_url = "/mysite/blog/post2/";
       </script>
@@ -49,13 +49,20 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="" href="../">Blog</a>
-                </li>
+              <p class="caption"><span class="caption-text">Blog</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../post1/">Post1:{if there is}</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Post2:{comments}</a>
+    <ul class="current">
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Misc</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../misc/mkdocs/">mkdocs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../misc/Unipy/">Unipy</a>
                   </li>
               </ul>
       </div>
@@ -72,7 +79,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Post2</li>
+          <li class="breadcrumb-item">Blog</li>
+      <li class="breadcrumb-item active">Post2:{comments}</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -81,10 +89,48 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="plot_datapy">plot_data.py</h1>
+<p>import pandas as pd
+import matplotlib.pyplot as plt</p>
+<p>def main():
+    try:
+        df = pd.read_csv('evaluation_data.csv')</p>
+<pre><code>    # Get parameters from user
+    time_col = input("Enter timestamp column name: ").strip()
+    y_cols = input("Enter 1-2 y-axis columns (comma-separated): ").split(',')
+    y_cols = [col.strip() for col in y_cols]
+
+    # Convert timestamp
+    df[time_col] = pd.to_datetime(df[time_col])
+
+    # Create plot
+    plt.figure(figsize=(12, 6))
+    ax = df.plot(x=time_col, y=y_cols[0])
+
+    # Add second axis if needed
+    if len(y_cols) == 2:
+        ax2 = ax.twinx()
+        df.plot(x=time_col, y=y_cols[1], ax=ax2, color='orange')
+        ax2.set_ylabel(y_cols[1])
+
+    ax.set_xlabel(time_col)
+    ax.set_ylabel(y_cols[0])
+    plt.title("Time Series Visualization")
+    plt.tight_layout()
+    plt.show()
+
+except Exception as e:
+    print(f"Error: {str(e)}")
+</code></pre>
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    main()</p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../post1/" class="btn btn-neutral float-left" title="Post1:{if there is}"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../misc/mkdocs/" class="btn btn-neutral float-right" title="mkdocs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -106,6 +152,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../post1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../misc/mkdocs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

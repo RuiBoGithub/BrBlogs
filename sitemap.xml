@@ -17,6 +17,18 @@
          <lastmod>2025-02-27</lastmod>
     </url>
     <url>
+         <loc>https://mydomain.org/mysite/blog/post3/</loc>
+         <lastmod>2025-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/blog/post4/</loc>
+         <lastmod>2025-02-27</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/misc/Unipy/</loc>
+         <lastmod>2025-02-27</lastmod>
+    </url>
+    <url>
          <loc>https://mydomain.org/mysite/misc/mkdocs/</loc>
          <lastmod>2025-02-27</lastmod>
     </url>
