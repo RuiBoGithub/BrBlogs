@@ -12,3 +12,5 @@ nav:
   - About: about.md
   - Blog:
       - First Post: blog/post1.md
+  - Misc:   
+      - mkdocs: misc/mkdocs.md
