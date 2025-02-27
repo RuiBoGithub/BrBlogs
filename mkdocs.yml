@@ -7,10 +7,13 @@ theme:
   hljs_languages:
     - yaml
     - rus
+plugins:
+  - search
+  - awesome-pages
+sort: ascending
 nav:
   - Home: index.md
   - About: about.md
-  - Blog:
-      - First Post: blog/post1.md
+  - Blog: blog/
   - Misc:   
       - mkdocs: misc/mkdocs.md
