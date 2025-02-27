@@ -1,0 +1,14 @@
+site_name: Rui's Blog
+site_url: https://mydomain.org/mysite
+site_author: Rui Bo
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rus
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+      - First Post: blog/post1.md
